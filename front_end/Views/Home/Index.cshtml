@@ -1,0 +1,120 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section title {
+    Trang chủ
+}
+
+<!-- Page 1: Welcome / Đặt bàn -->
+<div id="welcomePage" class="page active">
+    <div class="header">
+        <div class="restaurant-name">🍜 Nhà Hàng Hương Việt</div>
+        <div class="table-name">📍 Bàn 5</div>
+    </div>
+    <div class="welcome-content">
+        <div class="welcome-icon">🎉</div>
+        <h1 class="welcome-title">Chào mừng quý khách!</h1>
+        <button class="btn-primary" onclick="goToMenu()">
+            Xem Menu
+        </button>
+    </div>
+</div>
+
+<!-- Page 2: Menu -->
+<div id="menuPage" class="page">
+    <div class="header">
+        <div class="restaurant-name">🍜 Menu</div>
+        <div class="table-name">Bàn 5</div>
+    </div>
+
+    <div class="search-container">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" id="searchInput" placeholder="Tìm món ăn..." oninput="filterMenu()">
+        </div>
+        <button class="filter-btn" onclick="openFilterModal()">
+            <span>⚙️</span> Bộ lọc
+        </button>
+    </div>
+
+    <div class="categories" id="categories"></div>
+    <div class="menu-list" id="menuList"></div>
+
+    <button class="cart-float" onclick="goToCart()">
+        🛒
+        <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+</div>
+
+<!-- Page 3: Cart -->
+<div id="cartPage" class="page">
+    <div class="header header-with-back">
+        <button class="back-btn" onclick="goToMenu()">←</button>
+        <div>
+            <div class="restaurant-name">🛒 Giỏ hàng</div>
+            <div class="table-name">Bàn 5</div>
+        </div>
+    </div>
+
+    <div class="cart-list" id="cartList"></div>
+
+    <div class="cart-summary">
+        <div class="cart-total">
+            <span>Tổng cộng:</span>
+            <span id="totalPrice">0đ</span>
+        </div>
+        <button class="btn-order" onclick="submitOrder()">Gửi Order</button>
+    </div>
+</div>
+
+<!-- Page 4: Order Success -->
+<div id="successPage" class="page">
+    <div class="header">
+        <div class="restaurant-name">✅ Đặt món thành công</div>
+    </div>
+
+    <div class="order-success">
+        <div class="success-icon">🎊</div>
+        <h2>Cảm ơn quý khách!</h2>
+        <p style="color: #666; margin: 15px 0;">Đơn hàng của bạn đã được gửi đến bếp</p>
+
+        <div class="order-code">
+            <div class="order-code-label">Mã đơn hàng</div>
+            <div class="order-code-value" id="orderCodeDisplay">#0000</div>
+        </div>
+
+        <button class="btn-primary" onclick="goToStatus()" style="margin-top: 20px;">
+            Xem Trạng Thái
+        </button>
+    </div>
+</div>
+
+<!-- Page 5: Order Status -->
+<div id="statusPage" class="page">
+    <div class="header header-with-back">
+        <button class="back-btn" onclick="goToMenu()">←</button>
+        <div>
+            <div class="restaurant-name">📊 Trạng thái đơn hàng</div>
+            <div class="table-name">Bàn 5</div>
+        </div>
+    </div>
+
+    <div class="status-list" id="statusList"></div>
+</div>
+
+<!-- Filter Modal -->
+<div id="filterModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">Bộ lọc món ăn</h3>
+            <button class="close-btn" onclick="closeFilterModal()">✕</button>
+        </div>
+        <div class="filter-tags" id="filterTags"></div>
+        <button class="btn-primary" style="width: 100%; margin-top: 20px;" onclick="applyFilters()">
+            Áp dụng
+        </button>
+    </div>
+</div>

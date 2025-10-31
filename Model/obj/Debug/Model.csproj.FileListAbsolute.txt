@@ -1,0 +1,12 @@
+D:\btgtvt\Model\bin\Debug\Model.dll.config
+D:\btgtvt\Model\bin\Debug\Model.dll
+D:\btgtvt\Model\bin\Debug\Model.pdb
+D:\btgtvt\Model\bin\Debug\EntityFramework.dll
+D:\btgtvt\Model\bin\Debug\EntityFramework.SqlServer.dll
+D:\btgtvt\Model\bin\Debug\EntityFramework.xml
+D:\btgtvt\Model\bin\Debug\EntityFramework.SqlServer.xml
+D:\btgtvt\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\btgtvt\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\btgtvt\Model\obj\Debug\Model.csproj.Up2Date
+D:\btgtvt\Model\obj\Debug\Model.dll
+D:\btgtvt\Model\obj\Debug\Model.pdb
