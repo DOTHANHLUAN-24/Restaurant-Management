@@ -53,12 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Dao\CategoryDao.cs" />
+    <Compile Include="Dao\TableDao.cs" />
+    <Compile Include="Dao\UserDao.cs" />
     <Compile Include="EF\AUDIT_LOGS.cs" />
     <Compile Include="EF\CATEGORIES.cs" />
     <Compile Include="EF\MENUITEMS.cs" />
     <Compile Include="EF\MENUITEMVARIANTS.cs" />
-    <Compile Include="EF\Model1.cs" />
+    <Compile Include="EF\RestaurantManagementDBContext.cs" />
     <Compile Include="EF\ORDERITEMS.cs" />
     <Compile Include="EF\ORDERS.cs" />
     <Compile Include="EF\PAYMENTS.cs" />
@@ -72,9 +74,7 @@
     <Compile Include="EF\USERS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dao\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.Config" />
     <None Include="packages.config" />

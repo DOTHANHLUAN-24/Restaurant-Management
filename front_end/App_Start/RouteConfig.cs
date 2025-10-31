@@ -13,6 +13,14 @@ namespace front_end
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            
+
+            routes.MapRoute(
+                name: "about",
+                url: "about",
+                defaults: new { controller = "About", action = "Index", id = UrlParameter.Optional }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

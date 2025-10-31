@@ -7,13 +7,13 @@ using Model.Dao;
 
 namespace front_end.Controllers
 {
-    public class UserController : Controller
+    public class MenuController : Controller
     {
-        // GET: User
+        // GET: Menu
         public ActionResult Index()
         {
+            ViewBag.Category =  new CategoryDao().getAllCategory();
             return View();
         }
-
     }
 }

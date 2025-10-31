@@ -82,3 +82,5 @@ D:\btgtvt\front_end\bin\EntityFramework.dll
 D:\btgtvt\front_end\bin\Model.pdb
 D:\btgtvt\front_end\bin\Model.dll.config
 D:\btgtvt\front_end\bin\EntityFramework.xml
+D:\btgtvt\front_end\bin\EntityFramework.SqlServer.dll
+D:\btgtvt\front_end\bin\EntityFramework.SqlServer.xml

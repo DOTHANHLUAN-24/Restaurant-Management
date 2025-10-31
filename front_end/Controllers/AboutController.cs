@@ -3,17 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Model.Dao;
 
 namespace front_end.Controllers
 {
-    public class UserController : Controller
+    public class AboutController : Controller
     {
-        // GET: User
+        // GET: About
         public ActionResult Index()
         {
             return View();
         }
-
     }
 }

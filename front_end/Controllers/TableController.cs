@@ -7,13 +7,14 @@ using Model.Dao;
 
 namespace front_end.Controllers
 {
-    public class UserController : Controller
+    public class TableController : Controller
     {
-        // GET: User
+        // GET: Table
         public ActionResult Index()
         {
-            return View();
+            var dao = new TableDao();
+            var model = dao.getListTable();
+            return View(model);
         }
-
     }
 }
